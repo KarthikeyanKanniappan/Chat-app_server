@@ -20,6 +20,6 @@ app.get("/", (req, res) => {
 app.use("/users", userRouter);
 app.use("/chat", chatRouter);
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is started");
 });
