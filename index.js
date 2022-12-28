@@ -6,6 +6,7 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import userRouter from "./routes/userRoutes.js";
 import chatRouter from "./routes/chatRoutes.js";
+
 // middleWare
 app.use(express.json());
 app.use(cors());

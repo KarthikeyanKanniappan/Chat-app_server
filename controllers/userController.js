@@ -17,14 +17,14 @@ export const registerUser = async (req, res) => {
       name: name,
       pic,
     });
-    const token = jwt.sign(
-      { email: result.email, id: result.id },
-      process.env.SECRET,
-      {
-        expiresIn: "1h",
-      }
-    );
-    res.status(201).json({ result, token });
+    // const token = jwt.sign(
+    //   { email: result.email, id: result.id },
+    //   process.env.SECRET,
+    //   {
+    //     expiresIn: "30d",
+    //   }
+    // );
+    // res.status(201).json({ result, token });
   } catch (err) {
     res.status(500).json({ message: "something went wrong" });
     console.log(err);
@@ -47,7 +47,7 @@ export const signin = async (req, res) => {
       { email: oldUser.email, id: oldUser._id },
       process.env.SECRET,
       {
-        expiresIn: "1h",
+        expiresIn: "30d",
       }
     );
     res.status(200).json({ result: oldUser, token });
