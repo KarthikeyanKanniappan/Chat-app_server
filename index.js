@@ -6,6 +6,7 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import userRouter from "./routes/userRoutes.js";
 import chatRouter from "./routes/chatRoutes.js";
+import messageRouter from "./routes/messageRoutes.js";
 
 // middleWare
 app.use(express.json());
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRouter);
 app.use("/chat", chatRouter);
+app.use("/message", messageRouter);
 
 app.listen(process.env.PORT, () => {
   console.log("Server is started");
