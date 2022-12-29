@@ -31,6 +31,7 @@ const io = new Server(server, {
   pingTimeout: 6000,
   cors: {
     origin: "*",
+    methods: ["GET", "POST", "PATCH", "DELETE"],
   },
 });
 // https://illustrious-elf-472acb.netlify.app
