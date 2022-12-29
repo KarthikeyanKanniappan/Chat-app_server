@@ -30,7 +30,7 @@ const server = app.listen(process.env.PORT, () => {
 const io = new Server(server, {
   pingTimeout: 6000,
   cors: {
-    origin: "https://illustrious-elf-472acb.netlify.app",
+    origin: "*",
   },
 });
 // https://illustrious-elf-472acb.netlify.app
